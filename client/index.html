@@ -3,24 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel = "stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel = "stylesheet" href="styles.css">
 	<link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 	<title>
 		JobBoard App by Mootii
 	</title>
 </head>
 
-<body>
-	<header>
-		<h1 class ="h3">
+<body style ="background-color: grey">
+	<header style="background-color:gray">
+		<h1 class ="h3" style="color:white">
 			Job Board
 		</h1>
 	</header>
-	<form>
-		<label for ="name">Employer</label>
-		<input class = "u-full-width" type="text" id ="name" name="name">
-		
-	</form>
+	<main>
+		<form class ="job_form">
+			<label for ="name" style="color:white">Employers</label>
+			<input type="text" id ="name" name="name">
+			<label for ="desc" style="color:white">Job Description</label>
+			<input type="text" id ="desc" name="desc"><br>
+			<button class = "button-primary">Post Job</button>
+		</form>
+		<div class = "load_img">
+			<img src="load.gif" alt="" width=75>
+		</div>
 </body>
 
 </html>

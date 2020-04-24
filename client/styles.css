@@ -1,4 +1,11 @@
-.h3 {
+.h3, .load_img {
 	text-align: center;
 }
 
+.job_form {
+	text-align: center;
+}
+
+.name {
+	text-align: left;
+}
