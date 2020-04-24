@@ -10,7 +10,11 @@
 		JobBoard App by Mootii
 	</title>
 </head>
-
+<div>
+<header class= "header">
+	Functional Job Board  // Stack: HTML/CSS/Nodejs/MongoDB
+</header>
+</div>
 <body style ="background-color: grey">
 	<header style="background-color:gray">
 		<h1 class ="h3" style="color:white">
@@ -18,16 +22,28 @@
 		</h1>
 	</header>
 	<main>
-		<form class ="job_form">
-			<label for ="name" style="color:white">Employers</label>
-			<input type="text" id ="name" name="name">
-			<label for ="desc" style="color:white">Job Description</label>
-			<input type="text" id ="desc" name="desc"><br>
-			<button class = "button-primary">Post Job</button>
-		</form>
-		<div class = "load_img">
-			<img src="load.gif" alt="" width=75>
+		<div class="row">
+			<div class="column1">
+				<h3 class="post" style="color:white">Submit Job Listing Here:</h2>
+				<form class ="job_form">
+					<label for ="name" style="color:white">Employer</label>
+					<input class = "u-full-width" type="text" id ="name" name="name">
+					<label for ="desc" style="color:white">Job Description</label>
+					<input class = "u-full-width" type="text" id ="desc" name="desc"><br>
+					<label for ="desc" style="color:white">Application Link</label>
+					<input class = "u-full-width" type="text" id ="desc" name="desc"><br>
+					<button class = "button-primary">Post Job</button>
+				</form>
+			</div>
+			<div class="column2" style="background-color:blue">
+				<div class = "load_img">
+					<img src="load.gif" alt="" width=75>
+				</div>
+			</div>
 		</div>
 </body>
+<footer class = "footer">
+	Created By Mootii Mamo <span style="float: right"><a href="http://www.linkedin.com/in/mootii">http://www.linkedin.com/in/mootii</a></span>
+</footer>
 
 </html>

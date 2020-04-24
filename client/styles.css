@@ -1,11 +1,31 @@
-.h3, .load_img {
-	text-align: center;
-}
-
-.job_form {
-	text-align: center;
-}
-
-.name {
+.header {
+	margin-top: -10px;
+	margin-left: -6px;
+	width: 100.6%;
+	background-color: white;
 	text-align: left;
+}
+
+.h3, .load_img, .post {
+	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	margin-left: -6px;
+	width: 100.6%;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	text-align: left;
+}
+
+.column2 {
+	float: right;
+	width: 68%;
+}
+
+.column1 {
+	float: left;
+	width: 30%;
 }
