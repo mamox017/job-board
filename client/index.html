@@ -15,34 +15,35 @@
 	Functional Job Board  // Stack: HTML/CSS/Nodejs/MongoDB
 </header>
 </div>
-<body style ="background-color: grey">
-	<header style="background-color:gray">
+<body style ="background-color:#cbcb9a">
+	<header style="background-color:#cbcb9a">
 		<h1 class ="h3" style="color:white">
 			Job Board
 		</h1>
 	</header>
 	<main>
 		<div class="row">
-			<div class="column1">
+			<div class="column1" style="background-color:#a8a857">
 				<h3 class="post" style="color:white">Submit Job Listing Here:</h2>
 				<form class ="job_form">
 					<label for ="name" style="color:white">Employer</label>
 					<input class = "u-full-width" type="text" id ="name" name="name">
 					<label for ="title" style="color:white">Job Title</label>
-					<input class = "u-full-width" type="text" id ="title" name="title">
+					<input class = "box1" type="text" id ="title" name="title">
 					<label for ="desc" style="color:white">Job Description</label>
-					<textarea class = "u-full-width">Example: We are looking for a qualified Software Engineer who has experience in...</textarea><br>
+					<textarea class = "paragraph" placeholder = "Example: We are looking for a qualified Software Engineer who has experience in..."></textarea><br>
 					<label for ="applink" style="color:white">Application Link</label>
 					<input class = "u-full-width" type="text" id ="applink" name="applink"><br>
 					<button class = "button-primary">Post Job</button>
 				</form>
 			</div>
-			<div class="column2" style="background-color:blue">
+			<div class="column2" style="background-color:#a8a857">
 				<div class = "load_img">
 					<img src="load.gif" alt="" width=75>
 				</div>
 			</div>
 		</div>
+		<script src="client.js"></script>
 </body>
 <footer class = "footer">
 	Created By Mootii Mamo <span style="float: right"><a href="http://www.linkedin.com/in/mootii">http://www.linkedin.com/in/mootii</a></span>
