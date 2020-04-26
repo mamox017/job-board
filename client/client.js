@@ -7,20 +7,21 @@ const errMsg = document.querySelector('.error-msg');
 const API_URL = 'http://localhost:5000/jobs';
 
 load.style.display = 'none';
-listjobs();
+//listjobs();
 
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
+	const formData = new FormData(form);
 	const employer = formData.get('name');
 	const title = formData.get('title');
-	const description = formData.get('name');
+	const description = formData.get('desc');
 	const link = formData.get('applink');
 
 	if (employer.trim() && title.trim() && link.trim()){
 		errMsg.style.display = 'none';
 		jobs.style.display = 'none';
-		loadingElement.style.display = '';
+		load.style.display = '';
 
 		const job = {
 			employer,
@@ -31,7 +32,7 @@ form.addEventListener('submit', (event) => {
 
 		fetch(API_URL, {
 	      method: 'POST',
-	      body: JSON.stringify(mew),
+	      body: JSON.stringify(job),
 	      headers: {
 	        'content-type': 'application/json'
 	      }
@@ -46,7 +47,7 @@ form.addEventListener('submit', (event) => {
 			}
 		}).then(() => {
 			form.reset();
-			listjobs();
+			//listjobs();
 		}).catch(errorMessage => {
 			jobs.style.display = '';
 			errMsg.textContent = errorMessage;
@@ -58,7 +59,7 @@ form.addEventListener('submit', (event) => {
 		errMsg.style.display = '';
 	}
 })
-
+/*
 function listjobs() {
 	jobs.innerHTML = '';
 	fetch(API_URL)
@@ -89,4 +90,4 @@ function listjobs() {
 			})
 			loadingElement.style.display = 'none';
 		});
-}
+}*/
