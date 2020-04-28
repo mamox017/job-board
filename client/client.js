@@ -54,7 +54,7 @@ function listjobs() {
 		.then(jobiter => {
 			jobiter.reverse();
 			jobiter.forEach(job => {
-				const div = document.createElement('div');
+				const div = document.createElement('jobs');
 				const header = document.createElement('h2');
 				header.textContent = "- Position: " + job.title;
 				const emplisting = document.createElement('h5');
@@ -63,10 +63,16 @@ function listjobs() {
 				desc.textContent = "- " + job.description;
 				const joblink = document.createElement('p');
 				joblink.textContent = "- URL: " + job.link;
+				const jobpost = document.createElement('p');
+				jobpost.textContent = "Posted on: " + new Date(job.posted);
+				const divider = document.createElement('small');
+				divider.textContent = "___________________________________________________________________________________________________________________________________________________________________________________________________________________";
 				div.appendChild(header);
 				div.appendChild(emplisting);
 				div.appendChild(desc);
 				div.appendChild(joblink);
+				div.appendChild(jobpost);
+				div.appendChild(divider);
 				jobs.appendChild(div);
 			})
 			load.style.display = 'none';
