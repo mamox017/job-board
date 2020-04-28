@@ -3,6 +3,8 @@
 - The stack that this job board utilizes is: MongoDB / ExpressJS / HTML+CSS / Nodejs
 - Jobs can be posted on the website and they will be saved in persistent storage through MongoDB.
 
+![alt text](https://i.imgur.com/E9gOfYC.png)
+
 # Building
 - To build and start the server, simply open up a terminal and run the command "npm run dev" on a terminal
 
