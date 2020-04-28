@@ -5,8 +5,12 @@
 
 # Building
 - To build and start the server, simply open up a terminal and run the command "npm run dev" on a terminal
+![alt text](https://imgur.com/AFQiFeR)
 - To start the client (live-server method), make sure you have live server installed and navigate to the client folder.  There you will enter the command "live-server" and the webpage will open up to 127.0.0.1:8080.
+![alt text](https://imgur.com/0gTSGDk)
 - To upload the job-board to a web page, you can use programs such as ZEIT Now and deploy the web application to the web.
+
+
 
 # Dependencies
 - This project utilizes the latest versions of:
@@ -16,6 +20,8 @@
   - Express
   - Morgan
 
-# to-do
-- Fill out listings (json method)
-- Git branching -> coding on devel, official releases on master
+# to-do notes
+- Separate job listings with proper dividers
+- Create search bar functionality
+- Upgrade interface for more aesthetically pleasing views
+- Push out updates on devel git branch before on production
