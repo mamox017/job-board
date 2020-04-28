@@ -2,16 +2,16 @@
 const express = require('express');
 const cors = require('cors');
 const monk = require('monk');
-const Filter = require('bad-words');
-const rateLimit = require("express-rate-limit");
+//const Filter = require('bad-words');
+//const rateLimit = require("express-rate-limit");
 
 //ExpressJS framework
 const app = express();
 
 //setup db
-const db = monk('localhost/jobsdb');
-const dbjobs = db.get('jobz');
-const filter = new Filter();
+const db = monk('localhost/job-board');
+const jobs = db.get('jobs');
+//const filter = new Filter();
 
 app.enable("trust proxy");
 
@@ -44,7 +44,9 @@ function isValidPosting(job) {
 //post route for /jobs
 app.post('/jobs', (req, res) => {
 	//validating received json has fields filled
-	if (isValidPosting()) {
+	console.log(isValidPosting(req.body));
+
+	if (isValidPosting(req.body)) {
 		//insert into db
 		console.log("Trying to parse job");
 		console.log(req.body.employer.toString);
@@ -59,14 +61,10 @@ app.post('/jobs', (req, res) => {
 
 		//inserts to database and responds back to client with
 		//what was created
-
-		dbjobs.insert(job)
-		.then(createdJob => {
-			//responds back with createdJob
-			//so that front end can list it
+		jobs.insert(job).then(createdJob => {
 			res.json(createdJob);
 		});
-
+		
 	} else {
 		res.status(422); //error not valid
 		res.json({

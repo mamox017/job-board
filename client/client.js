@@ -7,7 +7,7 @@ const errMsg = document.querySelector('.error-msg');
 const API_URL = 'http://localhost:5000/jobs';
 
 load.style.display = 'none';
-//listjobs();
+listjobs();
 
 
 form.addEventListener('submit', (event) => {
@@ -17,6 +17,11 @@ form.addEventListener('submit', (event) => {
 	const title = formData.get('title');
 	const description = formData.get('desc');
 	const link = formData.get('applink');
+
+	console.log(employer);
+	console.log(title);
+	console.log(description);
+	console.log(link);
 
 	if (employer.trim() && title.trim() && link.trim()){
 		errMsg.style.display = 'none';
@@ -36,30 +41,12 @@ form.addEventListener('submit', (event) => {
 	      headers: {
 	        'content-type': 'application/json'
 	      }
-	    }).then(response => {
-			if(!response.ok) {
-				const contentType = response.headers.get('content-type');
-				if (contentType.includes('json')) {
-					return response.json().then(error => Promise.reject(error.message));
-				} else {
-					return response.text().then(message => Promise.reject(message));
-				}
-			}
-		}).then(() => {
-			form.reset();
-			//listjobs();
-		}).catch(errorMessage => {
-			jobs.style.display = '';
-			errMsg.textContent = errorMessage;
-			errMsg.style.display = '';
-			load.style.display = 'none';
-		});
-	} else {
-		errMsg.textContent = 'Please fill out the required (*) fields!';
-		errMsg.style.display = '';
+		}).then(response => response.json()).then(createdJob => {
+				console.log(createdJob);
+			})
 	}
 })
-/*
+
 function listjobs() {
 	jobs.innerHTML = '';
 	fetch(API_URL)
@@ -68,26 +55,20 @@ function listjobs() {
 			jobiter.reverse();
 			jobiter.forEach(job => {
 				const div = document.createElement('div');
-
 				const header = document.createElement('h2');
-				header.textContent = job.title;
-
+				header.textContent = "- Position: " + job.title;
 				const emplisting = document.createElement('h5');
-				emplisting.textContent = job.employer;
-
+				emplisting.textContent = "- Company: " + job.employer;
 				const desc = document.createElement('p');
-				desc.textContent = job.description;
-
+				desc.textContent = "- " + job.description;
 				const joblink = document.createElement('p');
-				joblink.textContent = job.link;
-
+				joblink.textContent = "- URL: " + job.link;
 				div.appendChild(header);
 				div.appendChild(emplisting);
 				div.appendChild(desc);
 				div.appendChild(joblink);
-
 				jobs.appendChild(div);
 			})
-			loadingElement.style.display = 'none';
+			load.style.display = 'none';
 		});
-}*/
+}
