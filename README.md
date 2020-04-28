@@ -5,9 +5,13 @@
 
 # Building
 - To build and start the server, simply open up a terminal and run the command "npm run dev" on a terminal
-![alt text](https://imgur.com/AFQiFeR)
+
+![alt text](https://i.imgur.com/AFQiFeR.png)
+
 - To start the client (live-server method), make sure you have live server installed and navigate to the client folder.  There you will enter the command "live-server" and the webpage will open up to 127.0.0.1:8080.
-![alt text](https://imgur.com/0gTSGDk)
+
+![alt text](https://i.imgur.com/0gTSGDk.png)
+
 - To upload the job-board to a web page, you can use programs such as ZEIT Now and deploy the web application to the web.
 
 
