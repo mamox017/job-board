@@ -9,7 +9,7 @@ const monk = require('monk');
 const app = express();
 
 //setup db
-const db = monk('localhost/job-board');
+const db = monk(process.env.MONGO_URI || 'localhost/jobboard');
 const jobs = db.get('jobs');
 //const filter = new Filter();
 

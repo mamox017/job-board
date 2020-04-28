@@ -43,7 +43,11 @@ form.addEventListener('submit', (event) => {
 	      }
 		}).then(response => response.json()).then(createdJob => {
 				console.log(createdJob);
-			})
+		}).then(response => {
+			form.reset();
+			listjobs();
+			jobs.style.display = '';
+		})
 	}
 })
 
