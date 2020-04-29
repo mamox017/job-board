@@ -25,6 +25,9 @@
   - Nodejs
   - Express
   - Morgan
+- Live Server Startup Routine
+  - Nodemon
+  - live-server
 
 # to-do notes
 - Separate job listings with proper dividers
