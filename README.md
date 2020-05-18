@@ -30,7 +30,7 @@
   - live-server
 
 # Releases (Alpha)
-- Update: The server has been deployed in a test stages.
+- Update: The server has been deployed in its test stages.
 link: https://the-job-board.now.sh/
 - The current front end is quite buggy, it will be remade using ReactJS as well.
 
