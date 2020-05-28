@@ -1,6 +1,8 @@
 # Job-Board: Full stack web application
 Updated version (Bootstrap, Firebase, Javascript) 
 - https://thejobboard.now.sh
+
+# Description
 - This basic job board was created as a side project by Mootii Mamo in April 2020
 - The stack that this job board utilizes is: MongoDB / ExpressJS / HTML+CSS / Nodejs
 - Jobs can be posted on the website and they will be saved in persistent storage through MongoDB.
