@@ -1,4 +1,5 @@
 # Updated version! (Bootstrap, Firebase, Javascript) 
+This verison of the project is old and discontinued! Check out the new version at the following links:
 - https://github.com/mamox017/jb
 - https://thejobboard.now.sh
 
