@@ -1,7 +1,8 @@
-# Job-Board: Full stack web application
-Updated version (Bootstrap, Firebase, Javascript) 
+# Updated version! (Bootstrap, Firebase, Javascript) 
 - https://github.com/mamox017/jb
 - https://thejobboard.now.sh
+
+# Job-Board: Full stack web application
 
 # Description
 - This basic job board was created as a side project by Mootii Mamo in April 2020
